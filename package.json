@@ -1,0 +1,27 @@
+{
+  "name": "kyushu-haikunator",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dojineko/kyushu-haikunator.git"
+  },
+  "keywords": [
+    "haikunator",
+    "japan",
+    "kyushu"
+  ],
+  "author": "dojineko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dojineko/kyushu-haikunator/issues"
+  },
+  "homepage": "https://github.com/dojineko/kyushu-haikunator#readme",
+  "dependencies": {
+    "haikunator": "^2.0.0"
+  }
+}
