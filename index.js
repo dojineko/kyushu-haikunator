@@ -13,7 +13,7 @@ const defaultNouns = [
   'miyazaki', 'akune', 'amami', 'ibusuki', 'kagoshima', 'kushikino',
   'kokubu', 'sakurajima', 'shibushi', 'sendai', 'tanegashima',
   'tokunoshima', 'makurazaki', 'yakushima', 'yoron', 'ishigakijima',
-  'itoman', 'ginowan', 'kmejima', 'naha', 'miyakojima', 'yonakunijima'
+  'itoman', 'ginowan', 'kumejima', 'naha', 'miyakojima', 'yonakunijima'
 ]
 
 const defaultAdjectives = [
