@@ -38,7 +38,7 @@ const defaultAdjectives = [
   'windy', 'winter', 'wispy', 'witty', 'yellow', 'young'
 ]
 
-module.exports = class KyushuHaikunator extends Haikunator {
+class KyushuHaikunator extends Haikunator {
   constructor ({ defaults = {}, adjectives = defaultAdjectives, nouns = defaultNouns, seed } = {}) {
     super({
       defaults: defaults,
@@ -48,3 +48,5 @@ module.exports = class KyushuHaikunator extends Haikunator {
     })
   }
 }
+
+module.exports = KyushuHaikunator.default = KyushuHaikunator
