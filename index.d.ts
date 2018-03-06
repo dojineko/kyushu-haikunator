@@ -12,7 +12,7 @@ declare module 'kyushu-haikunator' {
     tokenChars?: string
   }
   export default class KyushuHaukunator {
-    constructor(options: IHaikunatorOptions)
-    haikunate(options: IHaikunateOptions)
+    constructor(options?: IHaikunatorOptions)
+    haikunate(options?: IHaikunateOptions)
   }
 }
