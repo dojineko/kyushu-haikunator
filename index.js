@@ -13,7 +13,7 @@ const defaultNouns = [
   'miyazaki', 'akune', 'amami', 'ibusuki', 'kagoshima', 'kushikino',
   'kokubu', 'sakurajima', 'shibushi', 'sendai', 'tanegashima',
   'tokunoshima', 'makurazaki', 'yakushima', 'yoron', 'ishigakijima',
-  'itoman', 'ginowan', 'kumejima', 'naha', 'miyakojima', 'yonakunijima'
+  'itoman', 'ginowan', 'kumejima', 'naha', 'miyakojima', 'yonakunijima',
 ]
 
 const defaultAdjectives = [
@@ -35,18 +35,19 @@ const defaultAdjectives = [
   'spring', 'square', 'steep', 'still', 'summer', 'sunny', 'super',
   'sweet', 'thoughtful', 'throbbing', 'tidy', 'tight', 'tiny',
   'twilight', 'wandering', 'warmhearted', 'weathered', 'white', 'wild',
-  'windy', 'winter', 'wispy', 'witty', 'yellow', 'young'
+  'windy', 'winter', 'wispy', 'witty', 'yellow', 'young',
 ]
 
 class KyushuHaikunator extends Haikunator {
-  constructor ({ defaults = {}, adjectives = defaultAdjectives, nouns = defaultNouns, seed } = {}) {
+  constructor({ defaults = {}, adjectives = defaultAdjectives, nouns = defaultNouns, seed } = {}) {
     super({
-      defaults: defaults,
-      adjectives: adjectives,
-      nouns: nouns,
-      seed: seed
+      defaults,
+      adjectives,
+      nouns,
+      seed,
     })
   }
 }
 
-module.exports = KyushuHaikunator.default = KyushuHaikunator
+module.exports = KyushuHaikunator
+module.exports.default = KyushuHaikunator
