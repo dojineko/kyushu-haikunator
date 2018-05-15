@@ -13,6 +13,6 @@ declare module 'kyushu-haikunator' {
   }
   export default class KyushuHaukunator {
     constructor(options?: IHaikunatorOptions)
-    haikunate(options?: IHaikunateOptions)
+    haikunate(options?: IHaikunateOptions): string
   }
 }
