@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "true"
   },
   "repository": {
     "type": "git",
@@ -22,22 +22,8 @@
     "url": "https://github.com/dojineko/kyushu-haikunator/issues"
   },
   "homepage": "https://github.com/dojineko/kyushu-haikunator#readme",
-  "xo": {
-    "semicolon": false,
-    "space": 2,
-    "rules": {
-      "arrow-parens": ["error", "always"],
-      "comma-dangle": [ "error", "always-multiline" ],
-      "object-curly-spacing": ["error", "always"],
-      "space-before-function-paren": ["error", { "anonymous": "always", "named": "never", "asyncArrow": "always" }]
-    }
-  },
   "dependencies": {
-    "haikunator": "^2.0.0"
+    "haikunator": "^2.1.0"
   },
-  "devDependencies": {
-    "ava": "^0.25.0",
-    "nyc": "^11.4.1",
-    "xo": "^0.20.3"
-  }
+  "devDependencies": {}
 }
