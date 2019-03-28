@@ -4,6 +4,12 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
     "clean": "del '**/*.js' '**/*.js.map' '!node_modules/**' '!.git/**'",
     "build": "run-p build:*",
