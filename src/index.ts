@@ -1,4 +1,5 @@
-const Haikunator = require('haikunator')
+import { RandomSeed } from 'random-seed'
+import Haikunator, { Options, Config } from 'haikunator'
 
 const defaultNouns = [
   'tenjin', 'iizuka', 'ohmuta', 'kurume', 'kokura', 'kurosaki', 'tagawa',
@@ -38,16 +39,47 @@ const defaultAdjectives = [
   'windy', 'winter', 'wispy', 'witty', 'yellow', 'young',
 ]
 
-class KyushuHaikunator extends Haikunator {
-  constructor({ defaults = {}, adjectives = defaultAdjectives, nouns = defaultNouns, seed } = {}) {
-    super({
-      defaults,
-      adjectives,
-      nouns,
-      seed,
+class KyushuHaikunator {
+  private core: Haikunator
+
+  constructor(options?: Options) {
+    this.core = new Haikunator({
+      nouns: defaultNouns,
+      adjectives: defaultAdjectives,
+      ...options,
     })
   }
+
+  public haikunate(options?: Config): string {
+    return this.core.haikunate(options)
+  }
+  public get adjectives(): string[] {
+    return this.core.adjectives
+  }
+  public set adjectives(x: string[]) {
+    this.core.adjectives = x
+  }
+  public get nouns(): string[] {
+    return this.core.nouns
+  }
+  public set nouns(x: string[]) {
+    this.core.nouns = x
+  }
+  public get random(): RandomSeed {
+    return this.core.random
+  }
+  public set random(x: RandomSeed) {
+    this.core.random = x
+  }
+  public get config(): Config {
+    return this.core.config
+  }
+  public set config(x: Config) {
+    this.core.config = x
+  }
 }
+
+export default KyushuHaikunator
 
 module.exports = KyushuHaikunator
 module.exports.default = KyushuHaikunator

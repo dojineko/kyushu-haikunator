@@ -2,10 +2,20 @@
   "name": "kyushu-haikunator",
   "version": "0.0.6",
   "description": "",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "package.json",
+    "README.md"
+  ],
   "scripts": {
-    "test": "true"
+    "clean": "del '**/*.js' '**/*.js.map' '!node_modules/**' '!.git/**'",
+    "build": "run-p build:*",
+    "build:js": "env NODE_ENV=production webpack",
+    "build:dts": "tsc -p ./tsconfig.dts.json",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,8 +32,38 @@
     "url": "https://github.com/dojineko/kyushu-haikunator/issues"
   },
   "homepage": "https://github.com/dojineko/kyushu-haikunator#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "^~/(.*)$": "<rootDir>/$1"
+    },
+    "transform": {
+      "\\.ts$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/*.test.ts"
+    ]
+  },
   "dependencies": {
+    "@types/random-seed": "^0.3.3",
     "haikunator": "^2.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/eslint": "^4.16.6",
+    "@types/jest": "^24.0.11",
+    "@types/webpack": "^4.4.26",
+    "@types/webpack-node-externals": "^1.6.3",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^5.15.3",
+    "jest": "^24.5.0",
+    "license-info-webpack-plugin": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^24.0.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
