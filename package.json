@@ -43,7 +43,9 @@
       "<rootDir>/src/**/*.test.ts"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "haikunator": "^2.1.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-transform-modules-umd": "^7.2.0",
@@ -58,7 +60,6 @@
     "babel-loader": "^8.0.6",
     "del-cli": "^2.0.0",
     "eslint": "^5.16.0",
-    "haikunator": "^2.1.1",
     "jest": "^24.8.0",
     "license-info-webpack-plugin": "^2.0.0",
     "npm-run-all": "^4.1.5",
